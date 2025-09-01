@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 // OpenRouter API configuration
-const OPENROUTER_API_KEY = "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";
+const OPENROUTER_API_KEY = "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";
 const OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 export const generateItinerary = async (prompt: AIPrompt, userId: string): Promise<Itinerary> => {
@@ -144,7 +144,7 @@ const generateDetailedTravelPlan = async (prompt: AIPrompt) => {
         'X-Title': 'Travel India AI Planner'
       },
       body: JSON.stringify({
-        model: "anthropic/claude-3-haiku",
+        model: "mistralai/mistral-7b-instruct",
         messages: [
           {
             role: "system",
